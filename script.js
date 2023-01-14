@@ -1,15 +1,10 @@
-let perguntarQuantidade ="";
+const lista = document.querySelector('ul')
 
 
-perguntarQuantidade = prompt("Qual a quantidade de cartas que deseja jogar?");
+let pergunta = prompt("Com quantas cartas quer jogar?");
+let numero = Number(pergunta);
+while(numero < 4 || numero > 14 || numero %2===1){
+    alert("Você digitou um número inválido, digite um número válido")
+  numero =prompt("Com quantas cartas quer jogar?");
 
-while(perguntarQuantidade %2 !=0){
-    alert("Número ímpar inválido para este logo, insira um número par");
-perguntarQuantidade = prompt("Qual a quantidade de cartas que deseja jogar?");
-
-}
-
-while(perguntarQuantidade < 4 || perguntarQuantidade > 14){
-    alert("Quantidade de cartas inválida, insira um valor entre 4 e 14");
-    perguntarQuantidade = prompt("Qual a quantidade de cartas que deseja jogar?");
 }
