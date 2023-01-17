@@ -1,5 +1,8 @@
 
-// criação primária de variáveis
+// criação primária de variáveis 
+
+
+// criando novo commit
 
 const lista = document.querySelector('ul')
 let primeiraCartaVira;
