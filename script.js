@@ -4,14 +4,15 @@
 const lista = document.querySelector('ul')
 let primeiraCartaVira;
 let segundaCartaVira;
-let pergunta = prompt("Com quantas cartas quer jogar?");
-let numero = Number(pergunta);
+
+
+let numero =0;
 let primeiraFila = []
 
 
-while(numero < 4 || numero > 14 || numero %2===1){
-    alert("Você digitou um número inválido, digite um número válido")
-  numero =prompt("Com quantas cartas quer jogar?");
+while(numero < 4 || numero > 14 || numero %2 !==0){
+
+  numero =prompt("Com quantas cartas quer jogar? digite um número par entre 4 e 14");
 
 }
 
@@ -80,7 +81,7 @@ let criaCarta = () => {
     carta.setAttribute('onclick', 'viraFace(this)'); // GERA O NUMERO PEDIDO COM AS IMAGENS
 
 }
-for (i = 0; i < pergunta; i++) {
+for (i = 0; i < numero; i++) {
     criaCarta();
 }
 
@@ -130,7 +131,7 @@ function verificaPares() {
         armazenaPares.push("Par!");
         if (armazenaPares.length == divide) {
             setTimeout(() => {
-                alert(`Parabéns, você ganhou em ${contajogadas} jogadas!!`)
+                alert(` Você ganhou em ${contajogadas} jogadas!`)
             }, 500);
         }
     }
